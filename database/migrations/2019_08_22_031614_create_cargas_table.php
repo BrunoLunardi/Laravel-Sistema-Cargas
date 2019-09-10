@@ -22,7 +22,7 @@ class CreateCargasTable extends Migration
 
             //Relação demandante e as cargas
             $table->integer('demandante_id')->unsigned();
-            $table->foreign('demandante_id')->references('id')->on('demandantes')->onDelete('cascade');                            
+            $table->foreign('demandante_id')->references('id')->on('users')->onDelete('cascade');                            
 
             $table->text('descricao_carga')->nullable(false);
             $table->string('status')->nullable(false)->default('pendente');

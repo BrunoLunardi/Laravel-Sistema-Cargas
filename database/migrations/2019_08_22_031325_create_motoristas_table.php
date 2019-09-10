@@ -26,7 +26,7 @@ class CreateMotoristasTable extends Migration
 
             //Relação adm cadastra motorista
             $table->integer('administrador_id')->unsigned();
-            $table->foreign('administrador_id')->references('id')->on('administradors')->onDelete('cascade');                            
+            $table->foreign('administrador_id')->references('id')->on('users')->onDelete('cascade');                            
 
 
             $table->timestamps();
