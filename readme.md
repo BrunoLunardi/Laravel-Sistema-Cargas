@@ -1,3 +1,106 @@
+## Criação do projeto
+
+composer create-project laravel/laravel Sistema-Cargas
+
+## Subir servidor local
+
+php artisan serve
+
+## Criação de Models e Migrations
+
+php artisan make:model NomeDaModel --migration
+
+## Criar um controller
+
+php artisan make:controller NomeDaControlller
+
+## Configuração do Banco de Dados
+
+Arquivos .env (raiz do projeto - usado para teste local) e /config/database.php
+
+## Nome do BD
+
+cursolaravel55_saldo
+
+## Instalação Easy AdminLTE integration with Laravel 5
+
+https://github.com/jeroennoten/Laravel-AdminLTE
+
+composer require jeroennoten/laravel-adminlte
+
+## Assets do Easy AdminLTE
+
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
+
+## Seeds
+
+php artisan make:seed nome_seed
+
+Após popuar o seeder navegue em database/seeds/DatabaseSeeder.php e coloque a chamada para o seeder que você criou.
+
+Exemplo: $this->call(UsersTableSeeder::class);
+
+Para executar o Seed:
+
+php artisan db:seed
+
+## Criar tela de login com AdminLTE
+
+php artisan make:adminlte (semelhante ao make:auth)
+
+## Criar arquivo de configuração do AdminLTE (para titulo das paginas, menu, etc.)
+
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=config
+
+Este arquivo estará em config/adminlte.php
+
+## Tradução da página
+
+https://github.com/caouecs/Laravel-lang
+
+Altere o nome da pasta para pt-br e copie ela para resources/lang
+
+Altere as seguintes linhas do arquivo config/app.php
+
+'locale' => 'pt-br',
+
+'fallback_locale' => 'pt-br',
+
+Após a instalação do pacote, pode exportar as configurações de idioma pelo comando:
+
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=translations
+
+A configuração pode ser acessado em:
+
+resources/lang/vendor/adminlte
+
+## Customizando views 
+
+Para gerar um arquivo de configurações da view o comando é:
+
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=views
+
+O arquivo será criado em:
+
+resources/views/vendor/adminlte
+
+
+## Recriar as migrations e executar seeds
+
+php artisan migrate:refresh --seed
+
+
+## Criar request (validação)
+
+php artisan make:request nome_request
+
+
+
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
