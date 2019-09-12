@@ -24,3 +24,4 @@ Route::get('/usuario', 'UsuarioControlller@index')->name('usuario');
 Route::get('/usuario/store_view', 'UsuarioControlller@storeView')->name('usuario_store_view');
 Route::post('/usuario/store_usuario', 'UsuarioControlller@store')->name('usuario_store');
 Route::get('/usuario/{id}/edit', 'UsuarioControlller@edit');
+Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');

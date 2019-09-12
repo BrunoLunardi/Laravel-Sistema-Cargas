@@ -12,7 +12,7 @@ class UsuarioControlller extends Controller
 {
     //
     public function index(){
-        $users = User::all();
+        $users = User::all()->where('deleted', 'false');
         return view('usuario.index', compact('users'));
     }
 
@@ -53,11 +53,11 @@ class UsuarioControlller extends Controller
     }
 
 
-    //dados fornecidos via PUT do formulário (resources/views/produto/edit.blade.php)
+    //dados fornecidos via PUT do formulário (resources/views/usuario/edit.blade.php)
     //função será acessada pela rota produtos.update passada pelo formulário
     public function update($id, Request $request){
 
-            //localiza o produto via id fornecida
+            //localiza o usuario via id fornecida
             $usuario = User::find($id);
             //dados do usuario
             $usuario->name = $request->input('name');
@@ -66,10 +66,27 @@ class UsuarioControlller extends Controller
             //insere os dados no bd
             $usuario->save();
 
-            //redireciona para a pagina anterior
+            //redireciona para a pagina index.blade.php de usuario
             return redirect('usuario')->with('success', "Usuário editado com sucesso!");
             
     }
+
+    //dados fornecidos via PUT do formulário (resources/views/usuario/edit.blade.php)
+    //função será acessada pela rota produtos.update passada pelo formulário
+    public function logicalDeletion($id){
+
+        //localiza o usuario via id fornecida
+        $usuario = User::find($id);
+        //dados do usuario
+        $usuario->deleted = 'true';
+        
+        //insere os dados no bd
+        $usuario->save();
+
+        //redireciona para a pagina anterior
+        return redirect('usuario')->with('success', "Usuário excluído com sucesso!");
+        
+}    
 
 
 

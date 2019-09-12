@@ -21,8 +21,14 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             //$table->date('data_nascimento')->nullable(false);
             $table->string('password')->nullable(false);
+            
+            //false => usuário ativo
+            //true  => usuário deletado
+            $table->string('deleted')->nullable(true)->default('false');
+            
             $table->rememberToken();
             $table->timestamps();
+
 
             //relação de endereco do usuario
             //$table->integer('endereco_id')->unsigned();
