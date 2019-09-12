@@ -20,7 +20,7 @@ class UsuarioControlller extends Controller
         return view('usuario.store');
     }
 
-    public function storeUsuario(Request $request){
+    public function store(Request $request){
 
         $user = new User();
 
@@ -41,8 +41,36 @@ class UsuarioControlller extends Controller
             return redirect ('login');
         }
 
-
     }
+
+    public function edit($id){
+            //utiliza a model User (app/User.php)
+            $usuario = User::find($id);
+
+            //retorna a view de edição (resources/views/usuario/edit.blade.php)
+                //passa o usuario para a view via array
+            return view('usuario.edit', array('usuario' => $usuario));     
+    }
+
+
+    //dados fornecidos via PUT do formulário (resources/views/produto/edit.blade.php)
+    //função será acessada pela rota produtos.update passada pelo formulário
+    public function update($id, Request $request){
+
+            //localiza o produto via id fornecida
+            $usuario = User::find($id);
+            //dados do usuario
+            $usuario->name = $request->input('name');
+            $usuario->email = $request->input('email');
+            
+            //insere os dados no bd
+            $usuario->save();
+
+            //redireciona para a pagina anterior
+            return redirect('usuario')->with('success', "Usuário editado com sucesso!");
+            
+    }
+
 
 
 }

@@ -34,7 +34,11 @@
               <td>{{$user->name}}</td>
               <td>{{$user->email}}</td>
               <td>
-                  <button class="btn btn-warning">Editar</button>
+                <a href="{{url('usuario/'.$user->id.'/edit')}}">
+                  <button class="btn btn-warning" >
+                    Editar
+                  </button>
+                </a>
                   <button class="btn btn-danger">Excluir</button>
               </td>
           </tr>
