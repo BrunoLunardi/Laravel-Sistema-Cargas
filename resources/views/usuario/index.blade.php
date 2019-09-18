@@ -30,14 +30,20 @@
         </thead>
         <tbody>
             @foreach ($users as $user)
-          <tr>
-              <td>{{$user->name}}</td>
-              <td>{{$user->email}}</td>
-              <td>
-                  <button class="btn btn-warning">Editar</button>
-                  <button class="btn btn-danger">Excluir</button>
-              </td>
-          </tr>
+                <tr>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>
+                      <a href="{{url('usuario/'.$user->id.'/edit')}}">
+                        <button class="btn btn-warning" >
+                          Editar
+                        </button>
+                      </a>
+                      <a href="{{url('usuario/'.$user->id.'/logicalDeletion')}}">
+                        <button class="btn btn-danger">Excluir</button>
+                      </a>
+                    </td>
+                </tr>
           @endforeach           
           <tr>
 

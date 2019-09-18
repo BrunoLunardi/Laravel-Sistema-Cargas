@@ -12,7 +12,7 @@ class UsuarioControlller extends Controller
 {
     //
     public function index(){
-        $users = User::all();
+        $users = User::all()->where('deleted', 'false');
         return view('usuario.index', compact('users'));
     }
 
@@ -20,7 +20,7 @@ class UsuarioControlller extends Controller
         return view('usuario.store');
     }
 
-    public function storeUsuario(Request $request){
+    public function store(Request $request){
 
         $user = new User();
 
@@ -41,8 +41,53 @@ class UsuarioControlller extends Controller
             return redirect ('login');
         }
 
-
     }
+
+    public function edit($id){
+            //utiliza a model User (app/User.php)
+            $usuario = User::find($id);
+
+            //retorna a view de edição (resources/views/usuario/edit.blade.php)
+                //passa o usuario para a view via array
+            return view('usuario.edit', array('usuario' => $usuario));     
+    }
+
+
+    //dados fornecidos via PUT do formulário (resources/views/usuario/edit.blade.php)
+    //função será acessada pela rota produtos.update passada pelo formulário
+    public function update($id, Request $request){
+
+            //localiza o usuario via id fornecida
+            $usuario = User::find($id);
+            //dados do usuario
+            $usuario->name = $request->input('name');
+            $usuario->email = $request->input('email');
+            
+            //insere os dados no bd
+            $usuario->save();
+
+            //redireciona para a pagina index.blade.php de usuario
+            return redirect('usuario')->with('success', "Usuário editado com sucesso!");
+            
+    }
+
+    //dados fornecidos via PUT do formulário (resources/views/usuario/edit.blade.php)
+    //função será acessada pela rota produtos.update passada pelo formulário
+    public function logicalDeletion($id){
+
+        //localiza o usuario via id fornecida
+        $usuario = User::find($id);
+        //dados do usuario
+        $usuario->deleted = 'true';
+        
+        //insere os dados no bd
+        $usuario->save();
+
+        //redireciona para a pagina anterior
+        return redirect('usuario')->with('success', "Usuário excluído com sucesso!");
+        
+}    
+
 
 
 }

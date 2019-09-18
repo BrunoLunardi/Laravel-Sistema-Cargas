@@ -15,10 +15,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//cria grupo de rotas (para garantir que só usuários autenticados acessarão estas rotas)
+//'middleware' => 'auth' filtro para altenticação
+//'namespace' => 'Admin' evita usar \Admin em todas os Controllers
+//'prefix' => 'admin' evita colocar admin em todas as rotas
+Route::group(['middleware' => ['auth']], function(){
+
+    
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    //rotas para usuário
+    Route::resource('usuario', 'UsuarioControlller');
+    Route::get('/usuario', 'UsuarioControlller@index')->name('usuario');
+    Route::get('/usuario/store_view', 'UsuarioControlller@storeView')->name('usuario_store_view');
+    Route::post('/usuario/store_usuario', 'UsuarioControlller@store')->name('usuario_store');
+    Route::get('/usuario/{id}/edit', 'UsuarioControlller@edit');
+    Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');
+
+    //rotas para veículos
+
+});
+
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/usuario', 'UsuarioControlller@index')->name('usuario');
-Route::get('/usuario/store_view', 'UsuarioControlller@storeView')->name('usuario_store_view');
-Route::post('/usuario/store_usuario', 'UsuarioControlller@storeUsuario')->name('usuario_store');
