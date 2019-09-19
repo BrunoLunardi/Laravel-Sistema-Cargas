@@ -44,16 +44,34 @@ class VeiculoController extends Controller
     
         }
     
-    
-
         public function edit($id){
             //utiliza a model User (app/User.php)
             $veiculo = Veiculo::find($id);
 
             //retorna a view de edição (resources/views/usuario/edit.blade.php)
                 //passa o usuario para a view via array
-            //return view('veiculo.edit', array('veiculo' => $veiculo));     
-            return view('veiculo.edit');     
+            return view('veiculo.edit', array('veiculo' => $veiculo));     
+            
     }
+
+    public function update($id, Request $request){
+
+        //localiza o usuario via id fornecida
+        $veiculo = Veiculo::find($id);
+        //dados do usuario
+        $veiculo->placa = $request->input('placa');
+        $veiculo->marca = $request->input('marca');
+        $veiculo->modelo = $request->input('modelo');
+        $veiculo->renavam = $request->input('renavam');
+        
+        //insere os dados no bd
+        $veiculo->save();
+
+        //redireciona para a pagina index.blade.php de usuario
+        return redirect('veiculo')->with('success', "Veículo editado com sucesso!");
+        
+}
+
+
 
 }

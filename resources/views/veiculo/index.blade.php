@@ -35,7 +35,7 @@
                     <td>{{$veiculo->modelo}}</td>
                     <td>{{$veiculo->renavam}}</td>
                     <td>
-                      <a href="{{--url('usuario/'.$user->id.'/edit')--}}">
+                      <a href="{{url('veiculo/'.$veiculo->id.'/edit')}}">
                         <button class="btn btn-warning" >
                           Editar
                         </button>
