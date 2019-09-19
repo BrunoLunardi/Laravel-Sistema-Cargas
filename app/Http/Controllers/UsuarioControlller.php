@@ -86,7 +86,7 @@ class UsuarioControlller extends Controller
         //redireciona para a pagina anterior
         return redirect('usuario')->with('success', "Usuário excluído com sucesso!");
         
-}    
+    }    
 
 
 

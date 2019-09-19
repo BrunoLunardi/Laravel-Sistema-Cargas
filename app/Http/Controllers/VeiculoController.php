@@ -11,7 +11,7 @@ class VeiculoController extends Controller
     //pagina inicial
 
         public function index(){
-            $veiculos = Veiculo::all();
+            $veiculos = Veiculo::all()->where('deleted', 'false');;
             return view('veiculo.index', compact('veiculos'));
         }
 
@@ -70,7 +70,22 @@ class VeiculoController extends Controller
         //redireciona para a pagina index.blade.php de usuario
         return redirect('veiculo')->with('success', "Veículo editado com sucesso!");
         
-}
+    }
+
+    public function logicalDeletion($id){
+
+        //localiza o usuario via id fornecida
+        $veiculo = Veiculo::find($id);
+        //dados do usuario
+        $veiculo->deleted = 'true';
+        
+        //insere os dados no bd
+        $veiculo->save();
+
+        //redireciona para a pagina anterior
+        return redirect('veiculo')->with('success', "Veículo excluído com sucesso!");
+        
+    }     
 
 
 

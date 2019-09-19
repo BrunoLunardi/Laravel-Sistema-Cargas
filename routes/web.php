@@ -40,6 +40,8 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/veiculo/store_view_veiculo', 'VeiculoController@storeView')->name('store_view_veiculo');
     //acessa view para cadastrar veiculo
     Route::post('/veiculo/veiculo_store', 'VeiculoController@store')->name('veiculo_store');
+    //deleção logica
+    Route::get('/veiculo/{id}/logicalDeletion', 'VeiculoController@logicalDeletion');
     Route::resource('veiculo', 'VeiculoController');
 
     

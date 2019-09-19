@@ -40,7 +40,7 @@
                           Editar
                         </button>
                       </a>
-                      <a href="{{--url('usuario/'.$user->id.'/logicalDeletion')--}}">
+                      <a href="{{url('veiculo/'.$veiculo->id.'/logicalDeletion')}}">
                         <button class="btn btn-danger">Excluir</button>
                       </a>
                     </td>
