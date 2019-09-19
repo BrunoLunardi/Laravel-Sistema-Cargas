@@ -141,7 +141,7 @@ return [
 //        ['header' => 'account_settings'],
         [
             'text' => 'Veículos',
-            'url'  => 'admin/settings',
+            'url'  => 'veiculo',
             'icon' => 'fas fa-truck',
 
         ],

@@ -34,7 +34,16 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');
 
     //rotas para veículos
+    Route::get('/veiculo', 'VeiculoController@index')->name('veiculo');
+    //editar
+    Route::get('/veiculo/{id}/edit', 'VeiculoController@edit');
+    //Route::resource('veiculo', 'VeiculoController');
+    Route::get('/veiculo/store_view_veiculo', 'VeiculoController@storeView')->name('store_view_veiculo');
 
+    Route::post('/veiculo/veiculo_store', 'VeiculoController@store')->name('veiculo_store');
+    
+
+    
 });
 
 Auth::routes();

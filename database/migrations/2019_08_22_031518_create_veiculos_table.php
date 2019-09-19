@@ -17,8 +17,8 @@ class CreateVeiculosTable extends Migration
             $table->increments('id');
 
                 //Relação motorista dirige veículo
-                $table->integer('motorista_id')->unsigned();
-                $table->foreign('motorista_id')->references('id')->on('motoristas')->onDelete('cascade');                
+                //$table->integer('motorista_id')->unsigned();
+                //$table->foreign('motorista_id')->references('id')->on('motoristas')->onDelete('cascade');                
 
                 $table->string('placa', 7)->nullable(false);
                 $table->string('marca', 45)->nullable(false);
@@ -27,7 +27,11 @@ class CreateVeiculosTable extends Migration
 
                 //Relação adm cadastra veículos
                 $table->integer('administrador_id')->unsigned();
-                $table->foreign('administrador_id')->references('id')->on('users')->onDelete('cascade');                            
+                $table->foreign('administrador_id')->references('id')->on('users')->onDelete('cascade');  
+                
+            //false => usuário ativo
+            //true  => usuário deletado
+            $table->string('deleted')->nullable(true)->default('false');                
 
             $table->timestamps();
         });
