@@ -16,7 +16,7 @@ class VeiculoController extends Controller
         }
 
 
-        public function storeView(){
+        public function create(){
             return view('veiculo.store_veiculo');
         }        
 

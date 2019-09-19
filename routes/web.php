@@ -21,25 +21,21 @@ Route::get('/', function () {
 //'prefix' => 'admin' evita colocar admin em todas as rotas
 Route::group(['middleware' => ['auth']], function(){
 
-    
-
     Route::get('/home', 'HomeController@index')->name('home');
 
     //rotas para usuário
-    Route::get('/usuario', 'UsuarioControlller@index')->name('usuario');
-    Route::get('/usuario/store_view', 'UsuarioControlller@storeView')->name('usuario_store_view');
-    Route::post('/usuario/store_usuario', 'UsuarioControlller@store')->name('usuario_store');
-    Route::get('/usuario/{id}/edit', 'UsuarioControlller@edit');
     Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');
     Route::resource('usuario', 'UsuarioControlller');
 
     //rotas para veículos
+    /*
     Route::get('/veiculo', 'VeiculoController@index')->name('veiculo');
     //editar
     Route::get('/veiculo/{id}/edit', 'VeiculoController@edit');
     Route::get('/veiculo/store_view_veiculo', 'VeiculoController@storeView')->name('store_view_veiculo');
     //acessa view para cadastrar veiculo
     Route::post('/veiculo/veiculo_store', 'VeiculoController@store')->name('veiculo_store');
+    */
     //deleção logica
     Route::get('/veiculo/{id}/logicalDeletion', 'VeiculoController@logicalDeletion');
     Route::resource('veiculo', 'VeiculoController');

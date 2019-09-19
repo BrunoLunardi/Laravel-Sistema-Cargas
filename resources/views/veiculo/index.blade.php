@@ -11,7 +11,7 @@
     <!-- aquivo de inclusão está em resources/views/admin/includes -->
     @include('includes.alerts')
 
-<a href="/veiculo/store_view_veiculo">
+<a href="/veiculo/create">
 <button type="button" class="btn btn-success pull-right">
     Adicionar veículo
 </button>

@@ -8,7 +8,7 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('veiculo_store') }}">
+<form method="POST" action="{{ route('veiculo.store') }}">
 
             <!-- TOken para não dar erro de envio de dados -->
             {!! csrf_field() !!}

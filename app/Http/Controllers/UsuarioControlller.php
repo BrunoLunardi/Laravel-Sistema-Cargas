@@ -16,7 +16,7 @@ class UsuarioControlller extends Controller
         return view('usuario.index', compact('users'));
     }
 
-    public function storeView(){
+    public function create(){
         return view('usuario.store');
     }
 

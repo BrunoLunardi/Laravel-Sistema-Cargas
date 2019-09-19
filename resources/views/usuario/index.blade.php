@@ -14,7 +14,7 @@
     <!-- aquivo de inclusão está em resources/views/admin/includes -->
     @include('includes.alerts')
 
-<a href="/usuario/store_view">
+<a href="/usuario/create">
 <button type="button" class="btn btn-success pull-right">
     Adicionar usuário
 </button>
