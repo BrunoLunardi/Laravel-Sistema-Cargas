@@ -28,6 +28,9 @@ class CreateMotoristasTable extends Migration
             $table->integer('administrador_id')->unsigned();
             $table->foreign('administrador_id')->references('id')->on('users')->onDelete('cascade');                            
 
+            //false => usuário ativo
+            //true  => usuário deletado
+            $table->string('deleted')->nullable(true)->default('false');  
 
             $table->timestamps();
         });

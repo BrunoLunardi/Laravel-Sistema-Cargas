@@ -27,20 +27,14 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');
     Route::resource('usuario', 'UsuarioControlller');
 
-    //rotas para veículos
-    /*
-    Route::get('/veiculo', 'VeiculoController@index')->name('veiculo');
-    //editar
-    Route::get('/veiculo/{id}/edit', 'VeiculoController@edit');
-    Route::get('/veiculo/store_view_veiculo', 'VeiculoController@storeView')->name('store_view_veiculo');
-    //acessa view para cadastrar veiculo
-    Route::post('/veiculo/veiculo_store', 'VeiculoController@store')->name('veiculo_store');
-    */
-    //deleção logica
+    //Veiculos
     Route::get('/veiculo/{id}/logicalDeletion', 'VeiculoController@logicalDeletion');
     Route::resource('veiculo', 'VeiculoController');
 
-    
+    //Motoristas
+    Route::resource('motorista', 'MotoristaController');
+
+
 });
 
 Auth::routes();

@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //define relacionamento entre usuario e motorista
+    public function motoristas()
+    {
+        return $this->belongsTo('App\Motorista', 'user_id', 'id');
+    }
+
 }

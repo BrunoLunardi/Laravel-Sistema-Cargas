@@ -15,12 +15,12 @@ class VeiculoController extends Controller
             return view('veiculo.index', compact('veiculos'));
         }
 
-
+        //retorna view para inserir
         public function create(){
             return view('veiculo.store_veiculo');
         }        
 
-
+        //insere veiculo no BD
         public function store(Request $request){
 
             $veiculo = new Veiculo();
@@ -44,6 +44,7 @@ class VeiculoController extends Controller
     
         }
     
+        //retorna view para editar um veiculo selecionado pela id
         public function edit($id){
             //utiliza a model User (app/User.php)
             $veiculo = Veiculo::find($id);

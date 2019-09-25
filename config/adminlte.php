@@ -147,7 +147,7 @@ return [
         ],
         [
             'text' => 'Motoristas',
-            'url'  => 'admin/settings',
+            'url'  => 'motorista',
             'icon' => 'fas fa-user',
         ],
         
