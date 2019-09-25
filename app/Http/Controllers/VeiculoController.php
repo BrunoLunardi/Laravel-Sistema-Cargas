@@ -53,7 +53,7 @@ class VeiculoController extends Controller
                 //passa o usuario para a view via array
             return view('veiculo.edit', array('veiculo' => $veiculo));     
             
-    }
+        }
 
     public function update($id, Request $request){
 

@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth']], function(){
 
     //Motoristas
     Route::resource('motorista', 'MotoristaController');
+    Route::get('/motorista/{id}/logicalDeletion', 'MotoristaController@logicalDeletion');
 
 
 });

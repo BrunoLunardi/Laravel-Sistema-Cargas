@@ -17,7 +17,7 @@ class CreateMotoristasTable extends Migration
             $table->increments('id');
 
             $table->string('cnh', 11)->unique()->nullable(false);
-            $table->char('tipo_cnh', 1)->unique()->nullable(false);
+            $table->char('tipo_cnh', 1)->nullable(false);
             $table->text('obs');
 
             //Relação motorista é usuário

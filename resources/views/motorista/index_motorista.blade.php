@@ -24,7 +24,7 @@
         <thead>
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">E-mail</th>
+            <th scope="col">CNH</th>
             <th scope="col">Ações</th>
           </tr>
         </thead>
@@ -34,12 +34,12 @@
                     <td>{{$motorista->email}}</td>
                     <td>{{$motorista->cnh}}</td>
                     <td>
-                      <a href="{{url('usuario/'.$motorista->id.'/edit')}}">
+                      <a href="{{url('motorista/'.$motorista->id.'/edit')}}">
                         <button class="btn btn-warning" >
                           Editar
                         </button>
                       </a>
-                      <a href="{{url('usuario/'.$motorista->id.'/logicalDeletion')}}">
+                      <a href="{{url('motorista/'.$motorista->id.'/logicalDeletion')}}">
                         <button class="btn btn-danger">Excluir</button>
                       </a>
                     </td>
