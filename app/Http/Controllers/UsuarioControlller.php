@@ -13,11 +13,11 @@ class UsuarioControlller extends Controller
     //
     public function index(){
         $users = User::all()->where('deleted', 'false');
-        return view('usuario.index', compact('users'));
+        return view('usuario.index_usuario', compact('users'));
     }
 
     public function create(){
-        return view('usuario.store');
+        return view('usuario.store_usuario');
     }
 
     public function store(Request $request){
@@ -49,7 +49,7 @@ class UsuarioControlller extends Controller
 
             //retorna a view de edição (resources/views/usuario/edit.blade.php)
                 //passa o usuario para a view via array
-            return view('usuario.edit', array('usuario' => $usuario));     
+            return view('usuario.edit_usuario', array('usuario' => $usuario));     
     }
 
 
@@ -62,8 +62,7 @@ class UsuarioControlller extends Controller
             //dados do usuario
             $usuario->name = $request->input('name');
             $usuario->email = $request->input('email');
-            
-            //insere os dados no bd
+
             $usuario->save();
 
             //redireciona para a pagina index.blade.php de usuario
@@ -79,13 +78,23 @@ class UsuarioControlller extends Controller
         $usuario = User::find($id);
         //dados do usuario
         $usuario->deleted = 'true';
-        
-        //insere os dados no bd
-        $usuario->save();
 
-        //redireciona para a pagina anterior
-        return redirect('usuario')->with('success', "Usuário excluído com sucesso!");
-        
+        //altera o email para concatenar (evitar o unique no bd quando usar o mesmo email novamente)
+        $usuario->email = $usuario->email.date("YmdHis");
+        $usuario->password = $usuario->password.date("YmdHis");
+        $usuario->name = $usuario->name.date("YmdHis");
+        //insere os dados no bd        
+
+        if($usuario->save()){        
+            if($usuario->id == auth()->user()->id){
+                return redirect('logout');
+            }else{
+                return redirect('usuario')->with('success', "Usuário excluído com sucesso!");            
+            }
+        }else{
+            //redireciona para a pagina anterior
+            return redirect('usuario')->with('error', "Erro ao excluir usuário!");            
+        }
     }    
 
 

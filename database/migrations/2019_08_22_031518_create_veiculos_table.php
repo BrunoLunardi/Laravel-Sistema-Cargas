@@ -20,10 +20,11 @@ class CreateVeiculosTable extends Migration
                 //$table->integer('motorista_id')->unsigned();
                 //$table->foreign('motorista_id')->references('id')->on('motoristas')->onDelete('cascade');                
 
-                $table->string('placa', 7)->nullable(false);
+                $table->string('placa', 7)->nullable(false)->unique();
                 $table->string('marca', 45)->nullable(false);
                 $table->string('modelo', 45)->nullable(false);
-                $table->string('renavam', 45)->nullable(false);
+                $table->string('renavam', 45)->nullable(false)->unique();
+                $table->integer('ano')->nullable(false);
 
                 //Relação adm cadastra veículos
                 $table->integer('administrador_id')->unsigned();

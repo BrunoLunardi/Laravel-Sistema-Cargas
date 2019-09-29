@@ -12,7 +12,7 @@ class VeiculoController extends Controller
 
         public function index(){
             $veiculos = Veiculo::all()->where('deleted', 'false');;
-            return view('veiculo.index', compact('veiculos'));
+            return view('veiculo.index_veiculo', compact('veiculos'));
         }
 
         //retorna view para inserir
@@ -29,6 +29,7 @@ class VeiculoController extends Controller
             $veiculo->marca = $request->marca;
             $veiculo->modelo = $request->modelo;
             $veiculo->renavam = $request->renavam;
+            $veiculo->ano = $request->ano;
 
             $veiculo->administrador_id = auth()->user()->id;
     
@@ -51,7 +52,7 @@ class VeiculoController extends Controller
 
             //retorna a view de edição (resources/views/usuario/edit.blade.php)
                 //passa o usuario para a view via array
-            return view('veiculo.edit', array('veiculo' => $veiculo));     
+            return view('veiculo.edit_veiculo', array('veiculo' => $veiculo));     
             
         }
 

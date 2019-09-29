@@ -20,6 +20,8 @@
 </button>
 </a>
 
+{{-- verifica se tem motoristas cadastrado no BD --}}
+@if(!$motoristas->isEmpty())
 <table class="table">
         <thead>
           <tr>
@@ -45,8 +47,9 @@
                     </td>
                 </tr>
           @endforeach           
-          <tr>
-
+@else
+  <p>Não tem motoristas cadastrado no sistema</p>
+@endif
         </tbody>
       </table>
 

@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <label for="placa">Placa:</label>
-            <input type="text" class="form-control" name="placa" id="placa" placeholder="Placa">
+            <input type="text" class="form-control" name="placa" id="placa"  maxlength=7 placeholder="Digite a Placa no formato AAA1234">
         </div>
 
         <div class="form-group">
@@ -29,8 +29,13 @@
         </div>
 
         <div class="form-group">
-          <label for="renavam">Renavam</label>
-          <input type="renavam" class="form-control" id="renavam" name="renavam"  placeholder="Renavam">
+                <label for="ano">Ano:</label>
+                <input type="number" step="1" class="form-control" id="ano" name="ano"  placeholder="Ano">
+        </div>
+
+        <div class="form-group">
+          <label for="renavam">Renavam:</label>
+          <input type="number" class="form-control" id="renavam" name="renavam"  placeholder="Renavam">
         </div>
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>

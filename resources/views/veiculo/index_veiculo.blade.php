@@ -17,6 +17,9 @@
 </button>
 </a>
 
+
+{{-- verifica se tem veículos cadastrado no BD --}}
+@if(!$veiculos->isEmpty())
 <table class="table">
         <thead>
           <tr>
@@ -24,6 +27,7 @@
             <th scope="col">Modelo</th>
             <th scope="col">Placa</th>
             <th scope="col">Renavam</th>
+            <th scope="col">Ano</th>
             <th scope="col">Ações</th>
           </tr>
         </thead>
@@ -34,6 +38,7 @@
                     <td>{{$veiculo->marca}}</td>
                     <td>{{$veiculo->modelo}}</td>
                     <td>{{$veiculo->renavam}}</td>
+                    <td>{{$veiculo->ano}}</td>
                     <td>
                       <a href="{{url('veiculo/'.$veiculo->id.'/edit')}}">
                         <button class="btn btn-warning" >
@@ -46,7 +51,9 @@
                     </td>
                 </tr>
             @endforeach 
-          <tr>
+@else
+  <p>Não tem veículos cadastrado no sistema</p>
+@endif
 
         </tbody>
       </table>
