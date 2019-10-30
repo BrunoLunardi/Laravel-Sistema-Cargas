@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function(){
 
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::post('/home', 'HomeController@store')->name('home');
 
     //rotas para usuário
     Route::get('/usuario/{id}/logicalDeletion', 'UsuarioControlller@logicalDeletion');

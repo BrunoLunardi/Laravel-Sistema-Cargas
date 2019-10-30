@@ -1,0 +1,842 @@
+{
+  "id": "2f7f717a-91c8-49ae-8b8d-d3870e6ec601",
+  "version": "2.0",
+  "name": "Cargas -Adler",
+  "url": "http://127.0.0.1:8000/motorista",
+  "tests": [{
+    "id": "68656574-57c4-4d87-aa41-de94ad04fdca",
+    "name": "Criar Usuário",
+    "commands": [{
+      "id": "65add9e3-f18d-4a6c-b3a7-76002cd0f0a2",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/usuario",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19e8cc53-4ad8-4347-a79c-e746f5b400a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "897x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72da0f71-58e0-489b-99a7-46c53d55f5cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar usuário')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e2ef33-4250-473b-ba22-13a19174a2cc",
+      "comment": "",
+      "command": "click",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7792af37-2ba4-4c46-afce-319a7b6a06e7",
+      "comment": "",
+      "command": "type",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "15669842707"
+    }, {
+      "id": "ded804dc-59fe-4ba3-8f1f-9f5b68392e48",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(3) > #nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Arthur Leão"
+    }, {
+      "id": "9ec0eb9f-8cf4-477c-91a2-21ecae1535cf",
+      "comment": "",
+      "command": "type",
+      "target": "name=data_nascimento",
+      "targets": [
+        ["name=data_nascimento", "name"],
+        ["css=.form-group:nth-child(4) > #nome", "css:finder"],
+        ["xpath=(//input[@id='nome'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "02/05/1996"
+    }, {
+      "id": "91d16217-72c4-4ae4-b17f-907c6daefe4d",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "arthurfleao@gmail.com"
+    }, {
+      "id": "ff8285ec-5159-4e3a-9cfd-e33e2cadbc02",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "2f310ca9-2f09-455e-95aa-852a2c0e194a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "589a2f1a-4b8e-4ab5-ae7b-cd790376d757",
+    "name": "Editar Usuário",
+    "commands": [{
+      "id": "80d15a22-98b2-4dd0-a9bd-1b1be77e9e00",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/usuario",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "089e10e0-9d7a-444f-b3d2-6003c7b7642d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "897x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "984f21e9-3da5-4822-8fbc-651e56cb154f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//td[3]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e4e5432-b6a1-4140-b824-bfcc7459c6ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a877806-4296-488a-8f74-a9030801150e",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "Arthur Alterado"
+    }, {
+      "id": "97a6d9cf-5ee6-4253-957f-a70c93fc992f",
+      "comment": "",
+      "command": "click",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c3bc7e4-0cc2-414b-b411-c9335fa103a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "5d0a9e23-f946-4943-b911-b93d8b3ab542",
+      "comment": "",
+      "command": "click",
+      "target": "id=data_nascimento",
+      "targets": [
+        ["id=data_nascimento", "id"],
+        ["name=data_nascimento", "name"],
+        ["css=#data_nascimento", "css:finder"],
+        ["xpath=//input[@id='data_nascimento']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13f29ccc-b798-4e60-b34e-51328bf0cf10",
+      "comment": "",
+      "command": "type",
+      "target": "id=data_nascimento",
+      "targets": [
+        ["id=data_nascimento", "id"],
+        ["name=data_nascimento", "name"],
+        ["css=#data_nascimento", "css:finder"],
+        ["xpath=//input[@id='data_nascimento']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "02/05/1996"
+    }, {
+      "id": "12368283-47db-44e3-96f9-49166a4acd89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Alterar!']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "886d4a53-347f-4850-98aa-26c75ec3d310",
+    "name": "Delete Usuário",
+    "commands": [{
+      "id": "65082da8-06b6-48ca-81b7-097a01fc664f",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/usuario",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9bc9aa0-f433-4e57-a289-9d85c3dfc474",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e21fb69b-e17e-463a-bcce-01a86996ca87",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .btn-danger",
+      "targets": [
+        ["css=tr:nth-child(3) .btn-danger", "css:finder"],
+        ["xpath=//tr[3]/td[3]/a[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9d517e48-247a-44a6-b0e6-abbde1196d40",
+    "name": "Criar Veiculo",
+    "commands": [{
+      "id": "ac880f13-9cf6-4ffe-8e5e-29808c3e57e8",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/veiculo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b29d390-d8bc-4431-9315-0b051b7bc335",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b20a8f55-8b98-45f2-ad64-782ac9347b2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar veículo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "038c9225-82ec-46f0-ac6c-c324ddbd2206",
+      "comment": "",
+      "command": "click",
+      "target": "id=placa",
+      "targets": [
+        ["id=placa", "id"],
+        ["name=placa", "name"],
+        ["css=#placa", "css:finder"],
+        ["xpath=//input[@id='placa']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9379a10-f86c-4953-b2dc-5d7515f09c3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=placa",
+      "targets": [
+        ["id=placa", "id"],
+        ["name=placa", "name"],
+        ["css=#placa", "css:finder"],
+        ["xpath=//input[@id='placa']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "XGH-001"
+    }, {
+      "id": "2dc0ddfb-199b-4d0e-8950-0915137d3ec9",
+      "comment": "",
+      "command": "type",
+      "target": "id=marca",
+      "targets": [
+        ["id=marca", "id"],
+        ["name=marca", "name"],
+        ["css=#marca", "css:finder"],
+        ["xpath=//input[@id='marca']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Gol"
+    }, {
+      "id": "89beae3c-b777-4b52-9f81-eb57d5b278fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=modelo",
+      "targets": [
+        ["id=modelo", "id"],
+        ["name=modelo", "name"],
+        ["css=#modelo", "css:finder"],
+        ["xpath=//input[@id='modelo']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Bolinha"
+    }, {
+      "id": "015414db-ffec-4103-9825-cd69ceac00ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=ano",
+      "targets": [
+        ["id=ano", "id"],
+        ["name=ano", "name"],
+        ["css=#ano", "css:finder"],
+        ["xpath=//input[@id='ano']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "1996"
+    }, {
+      "id": "d51b9a0c-d036-4d33-95d0-d7c479bb89a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=renavam",
+      "targets": [
+        ["id=renavam", "id"],
+        ["name=renavam", "name"],
+        ["css=#renavam", "css:finder"],
+        ["xpath=//input[@id='renavam']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "000012019"
+    }, {
+      "id": "a81e6de3-b0e2-4f1f-8cfa-313f379b7251",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "81a12101-d6da-499d-b790-e4e7bcccf14e",
+    "name": "Editar Veículo",
+    "commands": [{
+      "id": "1f272d41-a7e0-4d2b-84a7-9275c2228dd8",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/veiculo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ceeefb1-7dae-4ba3-a5d7-0f987daef0e7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35d7c22d-5b7c-4842-be81-86d85294b5d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//td[6]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d648e2ba-5f57-494d-ad6d-272f4cd776b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=placa",
+      "targets": [
+        ["id=placa", "id"],
+        ["name=placa", "name"],
+        ["css=#placa", "css:finder"],
+        ["xpath=//input[@id='placa']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cea84f1e-0992-4c75-ba64-9df96f216d1c",
+      "comment": "",
+      "command": "type",
+      "target": "id=placa",
+      "targets": [
+        ["id=placa", "id"],
+        ["name=placa", "name"],
+        ["css=#placa", "css:finder"],
+        ["xpath=//input[@id='placa']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "XGH-002"
+    }, {
+      "id": "a76fa8e2-6b62-42e5-9da3-1d0a4f6b1027",
+      "comment": "",
+      "command": "type",
+      "target": "id=modelo",
+      "targets": [
+        ["id=modelo", "id"],
+        ["name=modelo", "name"],
+        ["css=#modelo", "css:finder"],
+        ["xpath=//input[@id='modelo']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "Quadrado"
+    }, {
+      "id": "98229151-591a-4a55-8b80-f2a95260a768",
+      "comment": "",
+      "command": "click",
+      "target": "id=renavam",
+      "targets": [
+        ["id=renavam", "id"],
+        ["name=renavam", "name"],
+        ["css=#renavam", "css:finder"],
+        ["xpath=//input[@id='renavam']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04f94c75-5b67-4f2a-a149-43dfa4090684",
+      "comment": "",
+      "command": "type",
+      "target": "id=renavam",
+      "targets": [
+        ["id=renavam", "id"],
+        ["name=renavam", "name"],
+        ["css=#renavam", "css:finder"],
+        ["xpath=//input[@id='renavam']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "000022019"
+    }, {
+      "id": "3a605653-98b3-4c53-a51f-ddf49e4dfec7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Alterar!']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "af1229aa-f7cb-4efa-b136-458d73383bb8",
+    "name": "Deletar Veiculo",
+    "commands": [{
+      "id": "34f55c9b-1b63-4ad4-9aac-2c0d985e748b",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/veiculo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "221b6f36-20fe-4430-8bc6-c915122448ab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51af7853-ebd2-4a76-a248-7f39bdcee648",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Excluir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "18a8ac1f-ba42-4655-b431-95c2a420744b",
+    "name": "Criar Motorista",
+    "commands": [{
+      "id": "0d25762f-51eb-486c-b6ca-edcd681d9bbd",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/motorista",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "330a8e5d-4170-4073-a63e-41edaf2f626b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0a87aab-247e-4bfe-b8c9-a690cbf47f4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar Motorista')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d130f0e7-9a41-48d5-8868-750f417f18bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "072cf767-6315-4003-a55d-cea8ce095578",
+      "comment": "",
+      "command": "type",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css:finder"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "15669842707"
+    }, {
+      "id": "1e6a9801-c6d8-4362-8bb5-65fede9b6f93",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(3) > #nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Bruno Guazzeli"
+    }, {
+      "id": "e2c8c97e-e50f-449e-908e-0d2a6cc5236e",
+      "comment": "",
+      "command": "type",
+      "target": "name=data_nascimento",
+      "targets": [
+        ["name=data_nascimento", "name"],
+        ["css=.form-group:nth-child(4) > #nome", "css:finder"],
+        ["xpath=(//input[@id='nome'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "02/05/1996"
+    }, {
+      "id": "32538504-02e6-4f49-aa53-a5c9808952db",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "bruno.motorista@caminhao.com"
+    }, {
+      "id": "0dda7db8-34bc-4cae-9bbb-0b5ccfd30b27",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "caminhaodobruno"
+    }, {
+      "id": "02a63402-119c-484f-b3c8-4cedd8817cbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=cnh",
+      "targets": [
+        ["id=cnh", "id"],
+        ["name=cnh", "name"],
+        ["css=#cnh", "css:finder"],
+        ["xpath=//input[@id='cnh']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "00290002019"
+    }, {
+      "id": "fd5c43fa-57f8-40f8-856a-16d8cdb6bc19",
+      "comment": "",
+      "command": "type",
+      "target": "id=tipo_cnh",
+      "targets": [
+        ["id=tipo_cnh", "id"],
+        ["name=tipo_cnh", "name"],
+        ["css=#tipo_cnh", "css:finder"],
+        ["xpath=//input[@id='tipo_cnh']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "D"
+    }, {
+      "id": "c9c3397d-77e6-4dd3-8b84-3cf754885e64",
+      "comment": "",
+      "command": "type",
+      "target": "id=obs",
+      "targets": [
+        ["id=obs", "id"],
+        ["name=obs", "name"],
+        ["css=#obs", "css:finder"],
+        ["xpath=//input[@id='obs']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Motorista possui curso superior, possui direito a cela particular."
+    }, {
+      "id": "3847e6b6-0ca4-4640-bc8d-24a0e0ee38c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9dca706e-835a-4f89-9f83-e3f4e489f010",
+    "name": "Editar Motorista",
+    "commands": [{
+      "id": "715bd193-2fcc-4938-8f9c-f4ade04a0e60",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/motorista",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4931485d-20a7-42cd-aa53-9edac0ee4376",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e207714-8235-4b87-a232-73422b9bff98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//td[3]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a669d97c-5f62-4f07-99bf-b219423c6ced",
+      "comment": "",
+      "command": "click",
+      "target": "id=cnh",
+      "targets": [
+        ["id=cnh", "id"],
+        ["name=cnh", "name"],
+        ["css=#cnh", "css:finder"],
+        ["xpath=//input[@id='cnh']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cba64386-aba9-4285-b383-5acfa0e0c56e",
+      "comment": "",
+      "command": "type",
+      "target": "id=cnh",
+      "targets": [
+        ["id=cnh", "id"],
+        ["name=cnh", "name"],
+        ["css=#cnh", "css:finder"],
+        ["xpath=//input[@id='cnh']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "00290002020"
+    }, {
+      "id": "66c77f2d-ca13-48b2-a899-82137343fa26",
+      "comment": "",
+      "command": "type",
+      "target": "id=tipo_cnh",
+      "targets": [
+        ["id=tipo_cnh", "id"],
+        ["name=tipo_cnh", "name"],
+        ["css=#tipo_cnh", "css:finder"],
+        ["xpath=//input[@id='tipo_cnh']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "BD"
+    }, {
+      "id": "4dd7f246-b830-4604-8f22-599828f3e063",
+      "comment": "",
+      "command": "click",
+      "target": "id=obs",
+      "targets": [
+        ["id=obs", "id"],
+        ["name=obs", "name"],
+        ["css=#obs", "css:finder"],
+        ["xpath=//input[@id='obs']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e33b633-83e7-4382-808d-2a72c63799fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=obs",
+      "targets": [
+        ["id=obs", "id"],
+        ["name=obs", "name"],
+        ["css=#obs", "css:finder"],
+        ["xpath=//input[@id='obs']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "Motorista possui curso superior, possui direito a cela particular. Motorista também possui mestrado."
+    }, {
+      "id": "f038fe70-876a-423d-a44e-cef27b15fac0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Alterar!']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1514ecc3-9e32-4eaf-95ec-dd561e4d79e6",
+    "name": "Deletar Motorista",
+    "commands": [{
+      "id": "571ee6df-28bd-4f95-9fbf-2ff658eb3cab",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/motorista",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfea1ff9-1ce0-44d0-b317-3fba6762eb2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1299x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e68b7467-9c38-45cc-bbce-73900203d0f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Excluir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a6cbc590-6e53-4199-936c-35a4b1b99472",
+    "name": "Testar Usuário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["68656574-57c4-4d87-aa41-de94ad04fdca", "589a2f1a-4b8e-4ab5-ae7b-cd790376d757", "886d4a53-347f-4850-98aa-26c75ec3d310"]
+  }, {
+    "id": "7ae9bc6f-a24c-4949-b516-9fcb369f6b40",
+    "name": "Testar Veiculos",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9d517e48-247a-44a6-b0e6-abbde1196d40", "81a12101-d6da-499d-b790-e4e7bcccf14e", "af1229aa-f7cb-4efa-b136-458d73383bb8"]
+  }, {
+    "id": "8f789502-a978-48f9-a772-74b824368ee7",
+    "name": "Testar Motorista",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["18a8ac1f-ba42-4655-b431-95c2a420744b", "9dca706e-835a-4f89-9f83-e3f4e489f010", "1514ecc3-9e32-4eaf-95ec-dd561e4d79e6"]
+  }],
+  "urls": ["http://127.0.0.1:8000/usuario", "http://127.0.0.1:8000/motorista"],
+  "plugins": []
+}
