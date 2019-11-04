@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth']], function(){
     Route::resource('motorista', 'MotoristaController');
     Route::get('/motorista/{id}/logicalDeletion', 'MotoristaController@logicalDeletion');
 
+    //Modal
+    Route::get('/modal', 'HomeController@dadosModal')->name('modal');
 
 });
 

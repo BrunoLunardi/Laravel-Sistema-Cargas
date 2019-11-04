@@ -10,6 +10,12 @@
    crossorigin=""></script>
 
 
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+
 {{-- css maps --}}
 @mapstyles
 
@@ -21,33 +27,35 @@
 
 @section('content')
 
+
+{{-- Inicio div map --}}
 <div id="mapid">
     @map([
         'lat' => '-22.4269',
         'lng' => '-45.453',
         'zoom' => '13',
-            'markers' => [[
-                'title' => 'Go NoWare',
-                'lat' => '-22.417218',
-                'lng' => '-45.47224',
-            ]],
+            // 'markers' => [[
+            //     'title' => 'Go NoWare',
+            //     'lat' => '-22.417218',
+            //     'lng' => '-45.47224',
+            // ]],
 
     ])
-
+{{-- Fim div map --}}
 
 </div>
 
 <script>
+    // Inicio para scripts para o map funcionar    
     var mymap = L.map('mapid').setView([-22.4269, -45.453], 13);
-    // var marker = L.marker([-22.42055, -45.437222]).addTo(mymap);
+    //adiciona marcador ao mapa
+    var marker = L.marker([-22.42055, -45.437222]).addTo(mymap);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	id: 'mapbox.streets',
 	accessToken: 'your.mapbox.access.token'
-
-    
 
 }).addTo(mymap);
 
@@ -79,9 +87,37 @@ function saveLatLon(pos) {
     console.log(data.pos); // aqui voce trata data como quiser
   });
 }
+// Fim para scripts para o map funcionar    
 
+
+function getDados(){
+    console.log("teste"); // aqui voce trata data como quiser
+    // $("button").click(function(){
+    $.get('/modal', function(data){
+    alert("Data: " + data);
+//   });
+    });
+ 
+}
 
 </script>    
+
+
+<div id="Container">
+    <h1>Agenda de Contatos utilizando AJAX</h1>
+    <hr/>
+
+    <h2>Pesquisar Contato:</h2>
+    <div id="Pesquisar">
+        <input type="button" name="btnPesquisar" value="Pesquisar" onclick="getDados();"/>
+    </div>
+    <hr/>
+
+    <h2>Resultados da pesquisa:</h2>
+    <div id="Resultado"></div>
+    <hr>
+
+</div>
 
 
 {{-- scrips maps --}}
