@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class VeiculoController extends Controller
 {
     //pagina inicial
-
+    //ref
     public function index()
     {
         $veiculos = Veiculo::all()->where('deleted', 'false');

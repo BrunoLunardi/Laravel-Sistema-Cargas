@@ -103,7 +103,7 @@ function getDados(){
 </script>    
 
 
-<div id="Container">
+{{-- <div id="Container">
     <h1>Agenda de Contatos utilizando AJAX</h1>
     <hr/>
 
@@ -117,7 +117,7 @@ function getDados(){
     <div id="Resultado"></div>
     <hr>
 
-</div>
+</div> --}}
 
 
 {{-- scrips maps --}}
