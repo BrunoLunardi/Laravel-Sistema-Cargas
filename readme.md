@@ -1,3 +1,19 @@
+## GIT
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/BrunoLunardi/Ionic-primeiro-tutorial.git
+
+git push -u origin master
+
+## GIT Redmine exemplo
+
+This commit refs:#1, #2 and fixes #3
+
 ## Criação do projeto
 
 composer create-project laravel/laravel Sistema-Cargas
