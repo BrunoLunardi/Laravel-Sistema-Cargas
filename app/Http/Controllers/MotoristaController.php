@@ -12,11 +12,11 @@ class MotoristaController extends Controller
     
     public function index(){
         //$motoristas = Motorista::all()->where('deleted', 'false');
-        $motoristas = DB::table('motoristas')
-        ->join('users', 'users.id', '=', 'users.id')
-        ->get()->where('deleted', 'false');
 
-        //print_r($motoristas);
+        //relacionamento entre as tabelas motoristas e users (pela id do users)
+        $motoristas = DB::table('motoristas')
+        ->join('users', 'users.id', '=', 'motoristas.user_id')
+        ->get()->where('deleted', 'false');
 
         return view('motorista.index_motorista', compact('motoristas'));
         //return view('motorista.index_motorista');

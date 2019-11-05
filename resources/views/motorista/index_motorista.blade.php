@@ -33,7 +33,7 @@
         <tbody>
             @foreach ($motoristas as $motorista)
                 <tr>
-                    <td>nome</td>
+                    <td>{{$motorista->name}}</td>
                     <td>{{$motorista->cnh}}</td>
                     <td>
                       <a href="{{url('motorista/'.$motorista->id.'/edit')}}">
