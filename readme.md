@@ -94,11 +94,11 @@ php artisan migrate:refresh --seed
 
 php artisan make:request nome_request
 
+## Query Builder (relacionamento de tabelas)
 
-
-
-
-
+$motoristas = DB::table('tabela1')
+->join('tabela2', 'primary_key', '=', 'tabela1.foreign_key')
+->get();
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
