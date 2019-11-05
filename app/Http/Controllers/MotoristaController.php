@@ -6,12 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Motorista;
 use App\User;
-
+use DB;
 class MotoristaController extends Controller
 {
     
     public function index(){
-        $motoristas = Motorista::all()->where('deleted', 'false');
+        //$motoristas = Motorista::all()->where('deleted', 'false');
+        $motoristas = DB::table('motoristas')
+        ->join('users', 'users.id', '=', 'users.id')
+        ->get()->where('deleted', 'false');
+
+        //print_r($motoristas);
 
         return view('motorista.index_motorista', compact('motoristas'));
         //return view('motorista.index_motorista');
