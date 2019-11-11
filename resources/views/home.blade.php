@@ -55,11 +55,10 @@
           <div class="modal-body">
             <p>Veículo:</p>
             <select id="comboVeiculos" class="form-control"></select>
+            <p>Motoristas:</p>
+            <select id="comboMotoristas" class="form-control"></select>
             <p>Descrição:</p>
-            <textarea id="story" name="story"
-            rows="5" cols="33" class="form-control">
-                
-            </textarea>            
+            <textarea id="story" name="story" rows="5" cols="33" class="form-control"></textarea>            
           {{-- Fim conteúdo do modal --}}
           </div>
           <div class="modal-footer">
@@ -124,8 +123,9 @@ function saveLatLon(pos) {
 </script>  
   
 {{-- Busca dados no banco de dados, pela rota /moda que acessa o controler HomeController e a função dadosModal --}}
-<script type="text/javascript">    
-$.getJSON('/modal', function(data){
+<script type="text/javascript">  
+  // dados de veiculos
+$.getJSON('/modalVeiculo', function(data){
     for (i = 0; i < data.length; i++) {
         var _htmlOptions = "";
         console.log("Data: " + data[i]['placa']);
@@ -133,6 +133,17 @@ $.getJSON('/modal', function(data){
         $("#comboVeiculos").append(_htmlOptions);  
     }     
 });
+
+  // dados de motoristas
+  $.getJSON('/modalMotorista', function(data){
+    for (i = 0; i < data.length; i++) {
+        var _htmlOptions = "";
+        console.log("Data: " + data[i]['placa']);
+        _htmlOptions += "<option val='"+data[i]['id']+"'>"+data[i]['name']+"</option>";
+        $("#comboMotoristas").append(_htmlOptions);  
+    }     
+});
+
 </script>
 
 {{-- scrips maps --}}

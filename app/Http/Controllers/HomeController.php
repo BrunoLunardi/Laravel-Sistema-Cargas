@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Carga;
 use App\Veiculo;
+use App\Motorista;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -58,20 +59,19 @@ class HomeController extends Controller
 
     }
 
-    // lista dados para o modal
-    public function dadosModal()
+    // lista dados de veiculos para o modal
+    public function dadosModalVeiculo()
     {
-        // $veiculos = new Veiculo();
-
-        // $veiculos = DB::table('veiculos')
-        //    ->select('*');
-
         $veiculos = DB::table('veiculos')->where('deleted', 'false')->get();
-        // $veiculos = Veiculo::all()->where('deleted', 'false');
-
         return json_encode($veiculos);
+    }
 
-        //  ->join('tabela_de_join'....);
+    public function dadosModalMotorista(){
+        //relacionamento entre as tabelas motoristas e users (pela id do users)
+        $motoristas = DB::table('motoristas')
+        ->join('users', 'users.id', '=', 'motoristas.user_id')
+        ->get()->where('deleted', 'false');
+        return json_encode($motoristas);
     }
 
 }
