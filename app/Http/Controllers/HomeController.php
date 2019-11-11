@@ -66,7 +66,7 @@ class HomeController extends Controller
         // $veiculos = DB::table('veiculos')
         //    ->select('*');
 
-        $veiculos = DB::table('veiculos')->get();
+        $veiculos = DB::table('veiculos')->where('deleted', 'false')->get();
         // $veiculos = Veiculo::all()->where('deleted', 'false');
 
         return json_encode($veiculos);
