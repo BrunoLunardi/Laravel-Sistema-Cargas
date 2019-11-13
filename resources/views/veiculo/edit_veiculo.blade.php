@@ -1,3 +1,4 @@
+{{-- Este arquivo é referente ao [RFS015] Atualização de Veículo. Tarefa no Redmine #48 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
