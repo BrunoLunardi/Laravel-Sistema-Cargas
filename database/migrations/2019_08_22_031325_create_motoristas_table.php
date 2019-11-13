@@ -1,5 +1,5 @@
 <?php
-
+// Este arquivo é referente ao [RFS08] Cadastro de Motorista. Tarefa no Redmine #41
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

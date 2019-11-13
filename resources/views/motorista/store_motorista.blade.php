@@ -1,3 +1,4 @@
+{{-- Este arquivo é referente ao [RFS08] Cadastro de Motorista. Tarefa no Redmine #41 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
