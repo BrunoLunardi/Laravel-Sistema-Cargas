@@ -8,6 +8,7 @@
 // Este arquivo é referente ao [RFS09] Atualização de Motorista. Tarefa no Redmine #42
 // Este arquivo é referente ao [RFS010] Exclusão de Motorista. Tarefa no Redmine #43
 // Este arquivo é referente ao [RFS011] Cadastro de Administrador. Tarefa no Redmine #44
+// Este arquivo é referente ao [RFS012] Atualização de Administrador. Tarefa no Redmine #45
 /*
 |--------------------------------------------------------------------------
 | Web Routes

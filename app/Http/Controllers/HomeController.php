@@ -5,6 +5,7 @@
 // Este arquivo é referente ao [RFS03] Atualização de cargas. Tarefa no Redmine #36
 // Este arquivocode class=""> Exclusão de cargas. Tarefa no Redmine #37
 // Este arquivo é referente ao [RFS011] Cadastro de Administrador. Tarefa no Redmine #44
+// Este arquivo é referente ao [RFS012] Atualização de Administrador. Tarefa no Redmine #45
 namespace App\Http\Controllers;
 
 use App\Carga;
