@@ -1,3 +1,4 @@
+{{-- Este arquivo é referente ao [RFS05] Cadastro de Demandante. Tarefa no Redmine #38 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
