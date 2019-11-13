@@ -1,6 +1,7 @@
 <?php
 // Este arquivo é referente ao [RFS08] Cadastro de Motorista. Tarefa no Redmine #41
 // Este arquivo é referente ao [RFS09] Atualização de Motorista. Tarefa no Redmine #42
+// Este arquivo é referente ao [RFS010] Exclusão de Motorista. Tarefa no Redmine #43
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
