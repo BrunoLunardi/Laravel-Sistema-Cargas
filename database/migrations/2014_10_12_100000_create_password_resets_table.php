@@ -1,5 +1,7 @@
 <?php
 // Este arquivo é referente ao [RFS05] Cadastro de Demandante. Tarefa no Redmine #38
+// Este arquivo é referente ao [RFS06] Atualização de Demandante. Tarefa no Redmine #39
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
