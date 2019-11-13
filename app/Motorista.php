@@ -3,6 +3,7 @@
 // Este arquivo é referente ao [RFS03] Atualização de cargas. Tarefa no Redmine #36
 // Este arquivocode class=""> Exclusão de cargas. Tarefa no Redmine #37
 // Este arquivo é referente ao [RFS08] Cadastro de Motorista. Tarefa no Redmine #41
+// Este arquivo é referente ao [RFS09] Atualização de Motorista. Tarefa no Redmine #42
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
