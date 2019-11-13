@@ -1,3 +1,4 @@
+{{-- Este arquivo é referente ao [RFS014] Cadastro de Veículos. Tarefa no Redmine #47 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')

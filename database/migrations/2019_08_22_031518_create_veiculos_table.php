@@ -1,5 +1,5 @@
 <?php
-
+// Este arquivo é referente ao [RFS014] Cadastro de Veículos. Tarefa no Redmine #47
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
