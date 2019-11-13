@@ -2,7 +2,7 @@
 // Este arquivo é referente ao [RFS05] Cadastro de Demandante. Tarefa no Redmine #38
 // Este arquivo é referente ao [RFS06] Atualização de Demandante. Tarefa no Redmine #39
 // Este arquivo é referente ao [RFS07] Exclusão de Demandante. Tarefa no Redmine #40
-
+// Este arquivo é referente ao [RFS011] Cadastro de Administrador. Tarefa no Redmine #44
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
