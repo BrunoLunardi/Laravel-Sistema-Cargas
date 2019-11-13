@@ -1,6 +1,7 @@
 {{-- Este arquivo é referente ao [RFS01] Cadastro de cargas. Tarefa no Redmine #34 --}}
 {{-- Este arquivo é referente ao [RFS02] Visualização de cargas. Tarefa no Redmine #35 --}}
 {{-- Este arquivo é referente ao [RFS03] Atualização de cargas. Tarefa no Redmine #36 --}}
+{{-- Este arquivocode class=""> Exclusão de cargas. Tarefa no Redmine #37 --}}
 @extends('adminlte::page')
    {{-- CSS para interação com maps --}}
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
