@@ -1,4 +1,5 @@
 {{-- Este arquivo é referente ao [RFS014] Cadastro de Veículos. Tarefa no Redmine #47 --}}
+{{-- Este arquivo é referente ao [RFS016] Exclusão de Veículo. Tarefa no Redmine #49 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')

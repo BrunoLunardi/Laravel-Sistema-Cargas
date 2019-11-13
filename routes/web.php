@@ -12,6 +12,7 @@
 // Este arquivo é referente ao [RFS013] Exclusão de Administrador. Tarefa no Redmine #46
 // Este arquivo é referente ao [RFS014] Cadastro de Veículos. Tarefa no Redmine #47
 // Este arquivo é referente ao [RFS015] Atualização de Veículo. Tarefa no Redmine #48
+// Este arquivo é referente ao [RFS016] Exclusão de Veículo. Tarefa no Redmine #49
 /*
 |--------------------------------------------------------------------------
 | Web Routes
