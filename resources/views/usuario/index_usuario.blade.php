@@ -2,6 +2,7 @@
 {{-- Este arquivo é referente ao [RFS06] Atualização de Demandante. Tarefa no Redmine #39 --}}
 {{-- Este arquivo é referente ao [RFS07] Exclusão de Demandante. Tarefa no Redmine #40 --}}
 {{-- Este arquivo é referente ao [RFS011] Cadastro de Administrador. Tarefa no Redmine #44 --}}
+{{-- Este arquivo é referente ao [RFS013] Exclusão de Administrador. Tarefa no Redmine #46 --}}
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
