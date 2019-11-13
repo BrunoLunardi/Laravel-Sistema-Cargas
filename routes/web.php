@@ -3,6 +3,7 @@
 // Este arquivo é referente ao [RFS02] Visualização de cargas. Tarefa no Redmine #35
 // Este arquivo é referente ao [RFS05] Cadastro de Demandante. Tarefa no Redmine #38
 // Este arquivo é referente ao [RFS06] Atualização de Demandante. Tarefa no Redmine #39
+// Este arquivo é referente ao [RFS07] Exclusão de Demandante. Tarefa no Redmine #40
 
 
 /*
