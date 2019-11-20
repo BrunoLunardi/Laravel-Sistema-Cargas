@@ -35,7 +35,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return view('home');
     }
 
@@ -82,6 +81,20 @@ class HomeController extends Controller
 
     }
 
+    public function updateCarga (Request $request) {
+        
+            //localiza o usuario via id fornecida
+            $carga = Carga::find($request->idCarga);
+
+            $carga->status = $request->statusCombo;
+
+            $carga->save();
+
+            //redireciona para a pagina index.blade.php de usuario
+            return redirect('home')->with('success', "Carga alterada com sucesso!");
+
+    }
+
     // lista dados de veiculos para o modal
     public function dadosModalVeiculo()
     {
@@ -100,5 +113,12 @@ class HomeController extends Controller
 
         return json_encode($motoristas);
     }
+
+    // lista dados de veiculos para o modal
+    public function dadosMapsCarga()
+    {
+        $cargas = Carga::all()->where('status', '<>', 'Finalizado');
+        return json_encode($cargas);
+    }    
 
 }

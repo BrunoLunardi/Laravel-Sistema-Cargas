@@ -55,6 +55,8 @@ Route::group(['middleware' => ['auth']], function(){
 
     //Carga
     Route::post('/salvaCarga', 'HomeController@store')->name('salvaCarga');
+    Route::post('/atualizaCarga', 'HomeController@updateCarga')->name('atualizaCarga');
+    Route::get('/dadosMapsCarga', 'HomeController@dadosMapsCarga')->name('dadosMapsCarga');
 
 });
 
