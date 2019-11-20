@@ -59,17 +59,27 @@
           </div>
           {{-- Conteúdo do modal --}}
           <div class="modal-body">
+            <form method="post" action={{ route('salvaCarga') }}>
+            <!-- TOken para não dar erro de envio de dados -->
+            {!! csrf_field() !!}
             <p>Veículo:</p>
-            <select id="comboVeiculos" class="form-control"></select>
+            <select id="comboVeiculos" name="comboVeiculos" class="form-control"></select>
             <p>Motoristas:</p>
-            <select id="comboMotoristas" class="form-control"></select>
+            <select id="comboMotoristas" name="comboMotoristas" class="form-control"></select>
+
+            <p>Lat:</p>
+            <input type="text" id="lat" name="lat" class="form-control" value=""/>
+            <p>lon:</p>
+            <input type="text" id="lon" name="lon" class="form-control" value=""/>
+
             <p>Descrição:</p>
-            <textarea id="story" name="story" rows="5" cols="33" class="form-control"></textarea>            
+            <textarea id="obs" name="obs" rows="5" cols="33" class="form-control"></textarea>            
           {{-- Fim conteúdo do modal --}}
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+            <button type="submit" class="btn btn-success">Salvar</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          </form>
           </div>
         </div>
         
@@ -83,6 +93,7 @@
     var mymap = L.map('mapid').setView([-22.4269, -45.453], 13);
     //adiciona marcador ao mapa
     var marker = L.marker([-22.42055, -45.437222]).addTo(mymap);
+
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
@@ -112,9 +123,12 @@ function onMapClick(e) {
     $(document).ready(function(){
         $("#myModal").modal();
     });
+    
+    latInput = document.getElementById("lat"); //searches for and detects the input element from the 'myButton' id
+    latInput.value = lat; //changes the value
 
-    //salva latitude e longitude no bd
-    // saveLatLon(latlon);
+    lonInput = document.getElementById("lon"); //searches for and detects the input element from the 'myButton' id
+    lonInput.value = lon; //changes the value
 
 }
 mymap.on('click', onMapClick);
@@ -135,7 +149,7 @@ $.getJSON('/modalVeiculo', function(data){
     for (i = 0; i < data.length; i++) {
         var _htmlOptions = "";
         console.log("Data: " + data[i]['placa']);
-        _htmlOptions += "<option val='"+data[i]['id']+"'>"+data[i]['placa']+"</option>";
+        _htmlOptions += "<option value='"+data[i]['id']+"'>"+data[i]['placa']+"</option>";
         $("#comboVeiculos").append(_htmlOptions);  
     }     
 });
@@ -144,8 +158,8 @@ $.getJSON('/modalVeiculo', function(data){
   $.getJSON('/modalMotorista', function(data){
     for (i = 0; i < data.length; i++) {
         var _htmlOptions = "";
-        console.log("Data: " + data[i]['placa']);
-        _htmlOptions += "<option val='"+data[i]['id']+"'>"+data[i]['name']+"</option>";
+        console.log("Data: ", data);
+        _htmlOptions += "<option value='"+data[i]['id']+"'>"+data[i]['name']+"</option>";
         $("#comboMotoristas").append(_htmlOptions);  
     }     
 });

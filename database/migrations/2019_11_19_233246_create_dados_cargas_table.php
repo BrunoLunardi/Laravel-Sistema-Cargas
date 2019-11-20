@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Dadoscarga extends Migration
+class CreateDadosCargasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Dadoscarga extends Migration
      */
     public function up()
     {
-        Schema::create('dadoscargas', function (Blueprint $table) {
+        Schema::create('dados_cargas', function (Blueprint $table) {
             $table->increments('id');
 
             //Relação dadoscargas e as cargas
@@ -40,6 +40,6 @@ class Dadoscarga extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('dados_cargas');
     }
 }

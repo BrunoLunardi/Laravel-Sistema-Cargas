@@ -53,6 +53,9 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/modalVeiculo', 'HomeController@dadosModalVeiculo')->name('modalVeiculo');
     Route::get('/modalMotorista', 'HomeController@dadosModalMotorista')->name('modalMotorista');
 
+    //Carga
+    Route::post('/salvaCarga', 'HomeController@store')->name('salvaCarga');
+
 });
 
 Auth::routes();

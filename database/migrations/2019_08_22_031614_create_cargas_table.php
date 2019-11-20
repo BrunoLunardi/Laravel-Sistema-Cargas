@@ -18,11 +18,11 @@ class CreateCargasTable extends Migration
         Schema::create('cargas', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->text('descricao_carga')->nullable(false);
+            $table->text('descricao_carga')->nullable(true);
             $table->string('status')->nullable(false)->default('pendente');
             $table->decimal('latitude', 10, 5);
             $table->decimal('longitude', 10, 5);
-            $table->date('data_entrega', 10, 5);
+            $table->date('data_entrega', 10, 5)->nullable(true);
 
             //Relação demandante e as cargas
             $table->integer('demandante_id')->unsigned();
