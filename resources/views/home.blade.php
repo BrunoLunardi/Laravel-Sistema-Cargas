@@ -48,7 +48,7 @@
   {{-- Fim div map --}}
 </div>
 {{-- Inicio modal adição --}}
-<div class="container">
+<div class="container" id="body-todo">
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -138,6 +138,18 @@
 </div>
 {{-- Fim modal --}}
 <script>
+
+$.getJSON('/getDadosUser', function(data){
+  document.getElementsByClassName("main-sidebar")[0].style.display = "none";
+  
+  console.log('200metros', data[0].roles);
+    if (data[0].roles != 'ADMIN') {
+      document.getElementsByClassName("content-wrapper")[0].style['margin-left'] = 0;
+      document.getElementsByClassName("main-sidebar")[0].style.display = "none";
+    } else {
+      document.getElementsByClassName("main-sidebar")[0].style.display = "block";
+    }
+});
   // Inicio para scripts para o map funcionar    
   var mymap = L.map('mapid').setView([-22.4269, -45.453], 13);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {

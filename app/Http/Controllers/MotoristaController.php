@@ -16,10 +16,10 @@ class MotoristaController extends Controller
         //$motoristas = Motorista::all()->where('deleted', 'false');
 
         //relacionamento entre as tabelas motoristas e users (pela id do users)
-        $motoristas = DB::table('motoristas')
-        ->join('users', 'users.id', '=', 'motoristas.user_id')
+        $motoristas = DB::table('users')
+        ->join('motoristas', 'motoristas.user_id', '=', 'users.id')
         ->get()->where('deleted', 'false');
-
+        
         return view('motorista.index_motorista', compact('motoristas'));
         //return view('motorista.index_motorista');
     }
@@ -41,6 +41,7 @@ class MotoristaController extends Controller
             $user->name = $request->nome;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
+            $user->roles = "MOTORISTA";
 
             ///dados específicos do motorista
             $motorista = new Motorista();

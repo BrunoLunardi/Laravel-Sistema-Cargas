@@ -10,7 +10,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class UsuarioControlller extends Controller
@@ -25,6 +25,14 @@ class UsuarioControlller extends Controller
         return view('usuario.store_usuario');
     }
 
+    public function getDados () {
+        // $usuario = User::find(auth()->user()->id);
+        // $usuario = User::all()->where('id', auth()->user()->id);
+        $usuario =  DB::table('users')->where('id', auth()->user()->id)->get();
+        
+        return json_encode($usuario);
+    }
+
     public function store(Request $request){
 
         $user = new User();
@@ -32,6 +40,7 @@ class UsuarioControlller extends Controller
         $user->name = $request->nome;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->roles = "ADMIN";
 
         //echo $request->password;
 

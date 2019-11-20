@@ -36,7 +36,8 @@
             @foreach ($motoristas as $motorista)
                 <tr>
                     <td>{{$motorista->name}}</td>
-                    <td>{{$motorista->cnh}}</td>
+                    <td>{{$motorista->cnh}}
+                    </td>
                     <td>
                       <a href="{{url('motorista/'.$motorista->id.'/edit')}}">
                         <button class="btn btn-warning" >
